@@ -50,7 +50,7 @@ Tomcat should be configured for `localhost:8080` - if not, please update project
 ## Run the client side
 open the index.html in any browser and you should be good to go.
 
-## Credits
+## Authors
 - [Jonathan Cuendet](https://github.com/JOCuendet)
 - [Diogo Noronha](https://github.com/dkn157)
 - [Ana Pinto](https://github.com/AnaCastanheira)
