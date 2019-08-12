@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+
+<head>
+	<!-- meta charec set -->
+	<meta charset="utf-8">
+	<!-- Always force latest IE rendering engine or request Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Page Title -->
+	<title>TeachIN'</title>
+	<!-- Meta Description -->
+	<meta name="description" content="Repositórios de dinâmicas de educação não-formal">
+	<meta name="keywords"
+		content="educação não-formal, ignorância, medo, educação do grupo de pares, bullying, descoberta, coragem, comunicação, coesão de grupo, resolução de problemas, responsabilidade pessoal, ">
+	<meta name="author" content="Diogo Noronha, Ana Pinto, Jonathan Cuendet, David Ferreira, Martim Bombim">
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Google Font -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+	<!-- CSS
+		================================================== -->
+
+	<!-- Twitter Bootstrap css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- jquery.fancybox  -->
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<!-- animate -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Main Stylesheet -->
+	<link rel="stylesheet" href="css/main.css">
+	<!-- media-queries -->
+	<link rel="stylesheet" href="css/media-queries.css">
+	<!-- Fontawesome Icon font -->
+	<link rel="stylesheet" href="css/fontawesome.min.css">
+
+
+
+	<!--MODAL STYLE-->
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		/* Full-width input fields */
+		input[type=text],
+		input[type=password] {
+			width: 34%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
+
+		/* Set a style for all buttons */
+		button {
+			background-color: #42b442;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+			width: 10%;
+		}
+
+		button:hover {
+			opacity: 0.8;
+		}
+
+		/* Extra styles for the cancel button */
+		.cancelbtn {
+			width: auto;
+			padding: 10px 18px;
+			background-color: #f44336;
+		}
+
+		/* Center the image and position the close button */
+		.imgcontainer {
+			text-align: center;
+			margin: 24px 0 12px 0;
+			position: relative;
+		}
+
+		img.avatar {
+			width: 40%;
+			border-radius: 50%;
+		}
+
+		.container {
+			padding: 16px;
+		}
+
+		span.psw {
+			float: right;
+			padding-top: 16px;
+		}
+
+		/* The Modal (background) */
+		.modal {
+			display: none;
+			/* Hidden by default */
+			position: fixed;
+			/* Stay in place */
+			z-index: 1;
+			/* Sit on top */
+			left: 0;
+			top: 0;
+			width: 100%;
+			/* Full width */
+			height: 100%;
+			/* Full height */
+			overflow: auto;
+			/* Enable scroll if needed */
+			background-color: rgb(0, 0, 0);
+			/* Fallback color */
+			background-color: rgba(0, 0, 0, 0.4);
+			/* Black w/ opacity */
+			padding-top: 160px;
+		}
+
+		/* Modal Content/Box */
+		.modal-content {
+			background-color: #fefefe;
+			margin: 5% auto 15% auto;
+			/* 5% from the top, 15% from the bottom and centered */
+			border: 1px solid #888;
+			width: 80%;
+			/* Could be more or less, depending on screen size */
+		}
+
+		/* The Close Button (x) */
+		.close {
+			position: absolute;
+			right: 25px;
+			top: 0;
+			color: #000;
+			font-size: 35px;
+			font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+			color: red;
+			cursor: pointer;
+		}
+
+		/* Add Zoom Animation */
+		.animate {
+			-webkit-animation: animatezoom 0.6s;
+			animation: animatezoom 0.6s
+		}
+
+		@-webkit-keyframes animatezoom {
+			from {
+				-webkit-transform: scale(0)
+			}
+
+			to {
+				-webkit-transform: scale(1)
+			}
+		}
+
+		@keyframes animatezoom {
+			from {
+				transform: scale(0)
+			}
+
+			to {
+				transform: scale(1)
+			}
+		}
+
+		/* Change styles for span and cancel button on extra small screens */
+		@media screen and (max-width: 300px) {
+			span.psw {
+				display: block;
+				float: none;
+			}
+
+			.cancelbtn {
+				width: 100%;
+			}
+		}
+	</style>
+
+	<!--------------------END OF STYLE------------------------>
+
+</head>
+
+<body id="body">
+
+	<!-- preloader -->
+	<div id="preloader">
+		<img src="img/preloader.gif" alt="Preloader">
+	</div>
+	<!-- end preloader -->
+
+	<!-- 
+        Fixed Navigation
+        ==================================== -->
+	<header id="navigation" class="navbar-fixed-top navbar">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- responsive nav button -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<i class="fa fa-bars fa-2x"></i>
+				</button>
+				<!-- /responsive nav button -->
+
+				<!-- logo -->
+				<a class="navbar-brand" href="#body">
+					<h1 id="logo">
+						TeachIN'
+					</h1>
+				</a>
+				<!-- /logo -->
+
+			</div>
+
+			<!-- main nav -->
+			<nav class="collapse navbar-collapse navbar-right" role="navigation">
+				<ul id="nav" class="nav navbar-nav">
+					<li class="current"><a href="#body">Home</a></li>
+					<li><a href="#features">Serviços</a></li>
+					<li><a href="#works">Parcerias</a></li>
+					<li><a href="#team">A nossa equipa</a></li>
+					<li><a onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Procurar</a></li>
+					<li><a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Entrar</a>
+					</li>
+				</ul>
+			</nav>
+			<!-- /main nav -->
+
+		</div>
+	</header>
+	<!--
+        End Fixed Navigation
+        ==================================== -->
+
+
+
+	<!--
+        Home Slider
+        ==================================== -->
+
+	<section id="slider">
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+			<!-- Indicators bullet -->
+			<ol class="carousel-indicators">
+				<!--<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>-->
+				<!--<li data-target="#carousel-example-generic" data-slide-to="1">-->
+				</li>
+			</ol>
+			<!-- End Indicators bullet -->
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+
+				<!-- single slide -->
+				<div class="item active" style="background-image: url(img/banner.jpg);">
+					<div class="carousel-caption">
+						<h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated"><span>
+								TeachIN'</span>!</h2>
+						<h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span
+								class="color">Dynamic</span> Attitude.</h3>
+						<p data-wow-duration="1000ms" class="wow slideInRight animated">Repositórios de dinâmicas de
+							educação não-formal</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--
+        End Home SliderEnd
+        ==================================== -->
+
+	<!--
+        Features
+        ==================================== -->
+
+	<section id="features" class="features">
+		<div class="container">
+			<div class="row">
+
+				<div class="sec-title text-center mb50 wow bounceInDown animated" data-wow-duration="500ms">
+					<h2>Serviços</h2>
+					<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+				</div>
+
+				<!-- service item -->
+				<div class="col-md-4 wow fadeInLeft" data-wow-duration="500ms">
+					<div class="service-item">
+						<div class="service-icon">
+							<i class="fa fa-github fa-2x"></i>
+						</div>
+
+						<div class="service-desc">
+							<h3>Dinâmicas</h3>
+							<p>Repositório de dinâmicas, que podem ser selecionadas a partir de um problema
+								identificado.</p>
+						</div>
+					</div>
+				</div>
+				<!-- end service item -->
+
+				<!-- service item -->
+				<div class="col-md-4 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="500ms">
+					<div class="service-item">
+						<div class="service-icon">
+							<i class="fa fa-pencil fa-2x"></i>
+						</div>
+
+						<div class="service-desc">
+							<h3>Formação</h3>
+							<p>Disponibilizamos kits de formação para que os animadores possam melhoras as suas
+								competências e implementação de actividades. </p>
+						</div>
+					</div>
+				</div>
+				<!-- end service item -->
+
+				<!-- service item -->
+				<div class="col-md-4 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="900ms">
+					<div class="service-item">
+						<div class="service-icon">
+							<i class="fa fa-bullhorn fa-2x"></i>
+						</div>
+
+						<div class="service-desc">
+							<h3>Consultoria</h3>
+							<p>A qualquer momento pode ser requisitado um técnico qualificado, para ajudar a identificar
+								qual a melhor abordagem para determinado problema.</p>
+						</div>
+					</div>
+				</div>
+				<!-- end service item -->
+
+			</div>
+		</div>
+	</section>
+
+	<!--
+        End Serviços
+        ==================================== -->
+
+
+	<!--
+        PARCERIAS
+        ==================================== -->
+
+	<section id="works" class="works clearfix">
+		<div class="container">
+			<div class="row">
+
+				<div class="sec-title text-center">
+					<h2>Parcerias</h2>
+					<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+				</div>
+
+				<div class="sec-sub-title text-center">
+					<p></p>
+				</div>
+
+				<div class="work-filter wow fadeInRight animated" data-wow-duration="500ms">
+					<ul class="text-center">
+						<li><a href="javascript:;" data-filter="all" class="active filter">Todos</a></li>
+						<li><a href="javascript:;" data-filter=".branding" class="filter">Entidades Públicas</a></li>
+						<li><a href="javascript:;" data-filter=".web" class="filter">Empresas</a></li>
+						<li><a href="javascript:;" data-filter=".logo-design" class="filter">Associações</a></li>
+						<li><a href="javascript:;" data-filter=".photography" class="filter">IPSS</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="project-wrapper">
+
+			<figure class="mix work-item branding">
+				<img src="img/works/dge.jpeg" alt="">
+				<figcaption class="overlay">
+					<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-1.jpg"><i
+							class="fa fa-eye fa-lg"></i></a>
+					<h4>Direcção Geral de Educação</h4>
+				</figcaption>
+			</figure>
+
+			<figure class="mix work-item web">
+				<img src="img/works/ac.png" alt="">
+				<figcaption class="overlay">
+					<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-2.jpg"><i
+							class="fa fa-eye fa-lg"></i></a>
+					<h4>Academia de Código</h4>
+				</figcaption>
+			</figure>
+
+			<figure class="mix work-item logo-design">
+				<img src="img/works/ciap.png" alt="">
+				<figcaption class="overlay">
+					<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-3.jpg"><i
+							class="fa fa-eye fa-lg"></i></a>
+					<h4>Centro Incentivar a Partilha</h4>
+				</figcaption>
+			</figure>
+
+			<figure class="mix work-item photography">
+				<img src="img/works/fenacerci.jpeg" alt="">
+				<figcaption class="overlay">
+					<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-4.jpg"><i
+							class="fa fa-eye fa-lg"></i></a>
+					<h4>Federação Nacional das CERCI</h4>
+				</figcaption>
+			</figure>
+
+			<figure class="mix work-item branding">
+				<img src="img/works/porto.png" alt="">
+				<figcaption class="overlay">
+					<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-5.jpg"><i
+							class="fa fa-eye fa-lg"></i></a>
+					<h4>Câmara Municipal do Porto</h4>
+				</figcaption>
+			</figure>
+
+			<figure class="mix work-item web">
+				<img src="img/works/ies.png" alt="">
+				<figcaption class="overlay">
+					<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-6.jpg"><i
+							class="fa fa-eye fa-lg"></i></a>
+					<h4>Social Business School</h4>
+				</figcaption>
+			</figure>
+
+			<figure class="mix work-item logo-design">
+				<img src="img/works/va.jpeg" alt="">
+				<figcaption class="overlay">
+					<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-7.jpg"><i
+							class="fa fa-eye fa-lg"></i></a>
+					<h4>Vencer Autismo</h4>
+				</figcaption>
+			</figure>
+
+			<figure class="mix work-item branding">
+				<img src="img/works/uporto.png" alt="">
+				<figcaption class="overlay">
+					<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-8.jpg"><i
+							class="fa fa-eye fa-lg"></i></a>
+					<h4>Universidade do Porto</h4>
+				</figcaption>
+			</figure>
+
+		</div>
+
+
+	</section>
+
+	<!--
+		End Parcerias
+	    ==================================== -->
+
+	<!--
+        Equipa
+        ==================================== -->
+
+	<section id="team" class="team">
+		<div class="container">
+			<div class="row">
+
+				<div class="sec-title text-center wow fadeInUp animated" data-wow-duration="700ms">
+					<h2>Conheça a nossa equipa!</h2>
+					<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+				</div>
+
+				<div class="sec-sub-title text-center wow fadeInRight animated" data-wow-duration="500ms">
+					<p></p>
+				</div>
+
+				<!-- single member -->
+				<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+					data-wow-duration="500ms">
+					<div class="member-thumb">
+						<img src="img/team/martim.jpeg" alt="Team Member" class="img-responsive">
+						<figcaption class="overlay">
+							<h5>Martim Bombunas</h5>
+							<p>Once an aspiring archeologist...</p>
+							<ul class="social-links text-center">
+								<!--	<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li> -->
+								<li><a href="https://www.linkedin.com/in/martimdlima/"> <img src="./img/linkedin.png">
+										<i class="fa fa-facebook fa-lg"></i></a></li>
+								<li><a href="https://gitlab.com/mdLima0"> <img src="./img/github.png"> <i
+											class="fa fa-google-plus fa-lg"></i></a></li>
+							</ul>
+						</figcaption>
+					</div>
+					<h4>Martim Lima</h4>
+					<span>Junior FullStack Developer</span>
+				</figure>
+				<!-- end single member -->
+
+				<!-- single member -->
+				<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+					data-wow-duration="500ms" data-wow-delay="300ms">
+					<div class="member-thumb">
+						<img src="img/team/ana.jpeg" alt="Team Member" class="img-responsive">
+						<figcaption class="overlay">
+							<h5>Ana Nuh</h5>
+							<p>Do you think art, software, and social change fit perfectly together?</p>
+							<ul class="social-links text-center">
+								<li><a href="https://www.linkedin.com/in/anacastanheirapinto/"> <img
+											src="./img/linkedin.png"> <i class="fa fa-facebook fa-lg"></i></a></li>
+								<li><a href="https://github.com/AnaCastanheira"> <img src="./img/github.png"> <i
+											class="fa fa-google-plus fa-lg"></i></a></li>
+							</ul>
+						</figcaption>
+					</div>
+					<h4>Ana Pinto</h4>
+					<span>Junior FullStack Developer</span>
+				</figure>
+				<!-- end single member -->
+
+				<!-- single member -->
+				<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+					data-wow-duration="500ms" data-wow-delay="600ms">
+					<div class="member-thumb">
+						<img src="img/team/diogo.jpeg" alt="Team Member" class="img-responsive">
+						<figcaption class="overlay">
+							<h5>Noronha's</h5>
+							<p>I used to be the first smiley face you’d see when entering a hotel, making my guests’
+								wishes and dreams come true.</p>
+							<ul class="social-links text-center">
+								<li><a href="https://www.linkedin.com/in/diogoknoronha/"> <img
+											src="./img/linkedin.png"><i class="fa fa-twitter fa-lg">
+											<alt="">
+										</i></a></li>
+								<li><a href="https://github.com/dkn157"> <img src="./img/github.png"> <i
+											class="fa fa-facebook fa-lg"></i></a></li>
+							</ul>
+						</figcaption>
+					</div>
+					<h4>Diogo Noronha</h4>
+					<span>Junior FullStack Developer</span>
+				</figure>
+				<!-- end single member -->
+
+				<!-- single member -->
+				<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+					data-wow-duration="500ms" data-wow-delay="900ms">
+					<div class="member-thumb">
+						<img src="img/team/jonathan.jpeg" alt="Team Member" class="img-responsive">
+						<figcaption class="overlay">
+							<h5>Avec Jonathan</h5>
+							<p>After finishing IT school, I got a job in Switzerland!</p>
+							<ul class="social-links text-center">
+								<li><a href="https://www.linkedin.com/in/jonathancuendet/"> <img
+											src="./img/linkedin.png"> <i class="fa fa-facebook fa-lg"></i></a></li>
+								<li><a href="https://github.com/jocuendet"> <img src="./img/github.png"> <i
+											class="fa fa-google-plus fa-lg"></i></a></li>
+							</ul>
+						</figcaption>
+					</div>
+					<h4>Jonathan Cuendet</h4>
+					<span>Junior FullStack Developer</span>
+				</figure>
+				<!-- end single member -->
+
+				<!-- single member -->
+				<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+					data-wow-duration="500ms" data-wow-delay="900ms">
+					<div class="member-thumb">
+						<img src="img/team/david.jpeg" alt="Team Member" class="img-responsive">
+						<figcaption class="overlay">
+							<h5>Day-Vid</h5>
+							<p>Always seeking for personal growth...</p>
+							<ul class="social-links text-center">
+								<li><a href="https://www.linkedin.com/in/davidrsferreira/"> <img
+											src="./img/linkedin.png"><i class="fa fa-facebook fa-lg"></i></a></li>
+								<li><a href="https://github.com/Davidrsferreira"> <img src="./img/github.png"> <i
+											class="fa fa-google-plus fa-lg"></i></a></li>
+							</ul>
+						</figcaption>
+					</div>
+					<h4>David Ferreira</h4>
+					<span>Junior FullStack Developer</span>
+				</figure>
+				<!-- end single member -->
+
+
+				<!-- single member -->
+				<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+					data-wow-duration="500ms" data-wow-delay="900ms">
+					<div class="member-thumb">
+						<img src="img/team/seringas.jpeg" alt="Team Member" class="img-responsive">
+						<figcaption class="overlay">
+							<h5>MC Syringes</h5>
+							<p>Encapsulação vs. Encapsulamento</p>
+							<ul class="social-links text-center">
+							</ul>
+						</figcaption>
+					</div>
+					<h4>Seringas</h4>
+					<span>Technical Consultant</span>
+				</figure>
+				<!-- end single member -->
+
+
+				<!-- single member -->
+				<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+					data-wow-duration="500ms" data-wow-delay="900ms">
+					<div class="member-thumb">
+						<img src="img/team/faustino.jpeg" alt="Team Member" class="img-responsive">
+						<figcaption class="overlay">
+							<h5>Tio Faustino</h5>
+							<p>Batata com molho holandês vegan.</p>
+							</ul>
+						</figcaption>
+					</div>
+					<h4>João Faustino</h4>
+					<span>Leading Technical Consultant</span>
+				</figure>
+				<!-- end single member -->
+
+
+				<!-- single member -->
+				<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+					data-wow-duration="500ms" data-wow-delay="900ms">
+					<div class="member-thumb">
+						<img src="img/team/mariana.jpeg" alt="Team Member" class="img-responsive">
+						<figcaption class="overlay">
+							<h5>MC Mari</h5>
+							<p></p>
+							<ul class="social-links text-center">
+							</ul>
+						</figcaption>
+					</div>
+					<h4>Mariana Antas de Barros</h4>
+					<span>Technical Consultant</span>
+				</figure>
+				<!-- end single member -->
+
+			</div>
+		</div>
+	</section>
+
+	<!--
+        End Meet Our Team
+        ==================================== -->
+
+	<!--
+        Números
+        ==================================== -->
+
+	<section id="facts" class="facts">
+		<div class="parallax-overlay">
+			<div class="container">
+				<div class="row number-counters">
+
+					<div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
+						<h2>Números engraçados</h2>
+						<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+					</div>
+
+					<!-- first count item -->
+					<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+						data-wow-duration="500ms">
+						<div class="counters-item">
+							<!--<i class="far fa-clock fa-3x"></i>-->
+							<strong data-to="500">0</strong>
+							<p>Dinâmicas realizadas</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms"
+						data-wow-delay="300ms">
+						<div class="counters-item">
+							<!--<i class="fa fa-he"></i>-->
+							<strong data-to="8">0</strong>
+							<p>Parceiros</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms"
+						data-wow-delay="600ms">
+						<div class="counters-item">
+							<!--<i class="fa fa-rocket fa-3x"></i>-->
+							<strong data-to="70">0</strong>
+							<p> Clientes </p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms"
+						data-wow-delay="900ms">
+						<div class="counters-item">
+							<!--<i class="fa fa-trophy fa-3x"></i>-->
+							<strong data-to="30">0</strong>
+							<p>Municípios abrangidos</p>
+						</div>
+					</div>
+					<!-- end first count item -->
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--
+        End Some fun facts
+        ==================================== -->
+
+
+	<!--
+        Contact Us
+        ==================================== -->
+
+	<section id="contact" class="contact">
+		<div class="container">
+			<div class="row mb50">
+
+				<div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
+					<h2>Sobre nós</h2>
+					<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+				</div>
+
+				<div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
+					<p> <br>Idealistas e intensos, apaixonados por código e por temas acutilantes que pedem a nossa
+						atenção,</br> num dia de chuva especial caiu-nos nas mãos esta música incrível de NF:
+						<br>"Hold up my balloons and cover up my face</br>
+						I can feel them weighin' on me every day
+						<br>I should let 'em go and watch 'em float away
+						But I'm scared if I do, then I'll be more afraid"
+						<br>Saúde Mental? Em si não diz muito. Mas as consequências dos tempos modernos, a gestão de
+						expectativas, a imagem e alienação, isso sim diz-nos muito.
+						Assim como o estigma, a ostracização, a exclusão e a uniformização de expressão: não são para
+						nós.
+						Não devem ser para ninguém, muito menos para os nosso filhos.
+						É nas escolas e em grupos que aprendemos a ser gente. Que aprendemos a ser melhores.
+						Os outros são um espelho, e nossos aliados no caminho.
+						É nas escolas que os conteúdos são formais, se ensina contas e letras.
+						Nós queremos que os educadores, assoberbados com prazos e conteúdos, possam ser também ser
+						professores de gente.
+						E poderem ensinar conteúdos não-formais, ensinar a ser gente: a cooperar, a ouvir, a aceitar, a
+						incluir, a ser gente. Gente boa.
+						A cuidar a saúde mental do futuro. A criar a aceitação e expressão diferentes.
+
+						Aqui deixamos um repositório de dinâmicas de grupo, facilmente selecionadas com base num
+						problema.
+
+						<br>O mundo é para todos.</br>
+						O projecto surge através de uma música inspiradora de NF:</p>
+					<p> <a href="https://www.youtube.com/watch?v=XGGWhOUYObc"> Obrigada NF!</a></p>
+				</div>
+				<!-- contact form -->
+				<div class="col-lg-offset-1 col-lg-10 col-md-10 col-sm-7 col-xs-12 wow fadeInDown animated"
+					data-wow-duration="500ms" data-wow-delay="300ms">
+					<div class="contact-form">
+						<h3>Envia-nos a tua mensagem!!</h3>
+						<form action="#" id="contact-form">
+							<div class="input-group name-email">
+								<div class="input-field">
+									<input type="text" name="name" id="name" placeholder="Name" class="form-control">
+								</div>
+								<div class="input-field">
+									<input type="email" name="email" id="email" placeholder="Email"
+										class="form-control">
+								</div>
+							</div>
+							<div class="input-group">
+								<textarea name="message" id="message" placeholder="Message"
+									class="form-control"></textarea>
+							</div>
+							<div class="input-group">
+								<input type="submit" id="form-submit" class="pull-right" value="Send message">
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- end contact form -->
+
+			</div>
+		</div>
+	</section>
+
+	<footer id="footer" class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-offset-2 col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated"
+					data-wow-duration="500ms">
+					<div class="footer-single">
+						<img src="img/footer-logo.png" alt="">
+					</div>
+				</div>
+
+				<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms"
+					data-wow-delay="300ms">
+					<div class="footer-single">
+						<h6>About us </h6>
+						<p>"Hold up my balloons and cover up my face I can feel them weighin' on me every day
+							I should let 'em go and watch 'em float away
+							But I'm scared if I do, then I'll be more afraid"</p>
+						<p><a href="https://www.youtube.com/watch?v=XGGWhOUYObc"> Obrigada NF!</a></p>
+
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<p class="copyright text-center">
+						Copyright Hackhathon #29_Whiledlings @ 2019
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div id="id01" class="modal">
+
+		<form class="modal-content animate" action="/action_page.php">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('id01').style.display='none'" class="close"
+					title="Close Modal">&times;</span>
+				<img src="img/logo.png" alt="" class="avatar">
+			</div>
+
+			<div class="container">
+				<label for="uname"><b>Username</b></label>
+				<input type="text" placeholder="Enter Username" name="uname" required>
+
+				<label for="psw"><b>Password</b></label>
+				<input type="password" placeholder="Enter Password" name="psw" required>
+
+				<button type="submit">Login</button>
+			</div>
+		</form>
+	</div>
+	<div id="id02" class="modal">
+		<form class="modal-content animate" action="/action_page.php">
+				<div class="imgcontainer">
+						<span onclick="document.getElementById('id01').style.display='none'" class="close"
+							title="Close Modal">&times;</span>
+						<img src="img/logo.png" alt="" class="avatar">
+					</div>
+			<div class="container">
+				<select id="sel" class="custom-select" onChange="window.location.href=this.value">
+					<option value="">-- Select --</option>
+				</select>
+			</div>
+		</form>
+	</div>
+	<!--
+        End Contact Us
+        ==================================== -->
+
+
+
+
+	<a href="javascript:void(0);" id="back-top"><i class="fa fa-angle-up fa-3x"></i></a>
+
+
+	<script>
+
+		// Get the modal
+		var modal = document.getElementById('id01');
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+		var wow = new WOW({
+			boxClass: 'wow',      // animated element css class (default is wow)
+			animateClass: 'animated', // animation css class (default is animated)
+			offset: 120,          // distance to the element when triggering the animation (default is 0)
+			mobile: false,       // trigger animations on mobile devices (default is true)
+			live: true        // act on asynchronously loaded content (default is true)
+		}
+		);
+		wow.init();
+		</script>
+		<script>
+
+				// Get the modal
+				var modal2 = document.getElementById('id02');
+		
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function (event) {
+					if (event.target == modal2) {
+						modal2.style.display = "none";
+					}
+				}
+				var wow2 = new WOW({
+					boxClass: 'wow',      // animated element css class (default is wow)
+					animateClass: 'animated', // animation css class (default is animated)
+					offset: 120,          // distance to the element when triggering the animation (default is 0)
+					mobile: false,       // trigger animations on mobile devices (default is true)
+					live: true        // act on asynchronously loaded content (default is true)
+				}
+				);
+				wow2.init();
+				</script>
+	<!-- Essential jQuery Plugins
+		================================================== -->
+	<!-- Main jQuery -->
+
+
+	<script src="js/main.js"></script>
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	
+	<!-- Single Page Nav -->
+	<script src="js/jquery.singlePageNav.min.js"></script>
+	<!-- Twitter Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	
+	<!-- jquery.fancybox.pack -->
+	<script src="js/jquery.fancybox.pack.js"></script>
+	
+	<!-- jquery.mixitup.min -->
+	<script src="js/jquery.mixitup.min.js"></script>
+	
+	<!-- jquery.parallax -->
+	<script src="js/jquery.parallax-1.1.3.js"></script>
+	
+	<!-- jquery.countTo -->
+	<script src="js/jquery-countTo.js"></script>
+	
+	<!-- jquery.appear -->
+	<script src="js/jquery.appear.js"></script>
+	
+	<!-- Contact form validation -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+	<!-- jquery easing -->
+	<script src="js/jquery.easing.min.js"></script>
+	<!-- jquery easing -->
+	<script src="js/wow.min.js"></script>
+	
+	
+	
+	
+	<!-- Custom Functions -->
+	<script src="js/custom.js"></script>
+
+	<script type="text/javascript">
+		$(function () {
+			/* ========================================================================= */
+			/*	Contact Form
+			/* ========================================================================= */
+
+			$('#contact-form').validate({
+				rules: {
+					name: {
+						required: true,
+						minlength: 2
+					},
+					email: {
+						required: true,
+						email: true
+					},
+					message: {
+						required: true
+					}
+				},
+				messages: {
+					name: {
+						required: "come on, you have a name don't you?",
+						minlength: "your name must consist of at least 2 characters"
+					},
+					email: {
+						required: "no email, no message"
+					},
+					message: {
+						required: "um...yea, you have to write something to send this form.",
+						minlength: "thats all? really?"
+					}
+				},
+				submitHandler: function (form) {
+					$(form).ajaxSubmit({
+						type: "POST",
+						data: $(form).serialize(),
+						url: "process.php",
+						success: function () {
+							$('#contact-form :input').attr('disabled', 'disabled');
+							$('#contact-form').fadeTo("slow", 0.15, function () {
+								$(this).find(':input').attr('disabled', 'disabled');
+								$(this).find('label').css('cursor', 'default');
+								$('#success').fadeIn();
+							});
+						},
+						error: function () {
+							$('#contact-form').fadeTo("slow", 0.15, function () {
+								$('#error').fadeIn();
+							});
+						}
+					});
+				}
+			});
+		});
+	</script>
+</body>
+</html>
