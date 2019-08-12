@@ -1,4 +1,4 @@
-![logo](master/client/img/logo.png?raw=true "logo")
+![logo](/client/img/logo.png?raw=true "logo")
 
 # TeachIN'
 This project was developed by a team of five people in a 24-hour `hackathon` project, for the third and last round of group projects @ <Academia de Código_>'s bootcamp#29, taking place by the end of the 13th week of code learning.
